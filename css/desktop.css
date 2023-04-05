@@ -1,0 +1,166 @@
+@media screen and (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+
+	.section {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	.logo {
+		margin-right: 131px;
+	}
+	.menu {
+		display: flex;
+		align-items: center;
+	}
+
+	.menu-item:not(:last-child) {
+		margin-right: 40px;
+	}
+
+	.menu-link {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 1.33;
+		letter-spacing: 0.1em;
+		color: var(--primary-white-color);
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.menu-link:hover,
+	.menu-link:focus {
+		color: var(--accent-color);
+	}
+
+	.phone-number {			
+		margin-right: 40px;
+	}
+	.phone-number:hover,
+	.phone-number:focus {
+		color: var(--accent-color);
+
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	.header-btn {
+		margin-right: 16px;
+	}
+	.hero-right-sidee {
+		padding: 272px 100px 206px;
+	}
+	.hero-title {
+		font-size: 72px;
+		line-height: 1.18;
+	}
+	.hero-description-text {
+		width: 444px;
+	}
+
+	.barbers {
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+	.barbers-item {
+		width: calc((100%-60px) / 3);
+	}
+
+	.about-content {
+		max-width: 470px;
+	}
+	.about-title {
+		width: 470px;
+		font-size: 42px;
+		line-height: 1.17;
+	}
+	.about-descript {
+		margin-bottom: 42px;
+	}
+
+	.services {
+		max-width: 1600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.services-list {
+		width: calc((100% - 30px) / 2);
+		background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+	}
+	.services-list:first-child {
+		padding-bottom: 30px;
+	}
+	.services-list:last-child {
+		padding-top: 30px;
+	}
+	.services-content {
+		background-image: none;
+		gap: 30px;
+	}
+
+	.services-item-text:first-child {
+		order: -1;
+	}
+	.services-btn {
+		color: var(--primary-white-color);
+		display: block;
+		margin: auto;
+	}
+
+	.content-container {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.content-list {
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+	.content-item {
+		width: 170px;
+		padding: 20px 24px;
+	}
+	.content-left-side {
+		width: 50%;
+	}
+	.content-right-side {
+		width: 50%;
+		max-width: 500px;
+	}
+	.content-descript {
+		margin-bottom: 0;
+	}
+
+	.barbers-list {
+		column-gap: 30px;
+	}
+	.barbers-item {
+		max-width: 370px;
+	}
+
+	.gallery-image {
+		max-width: 270px;
+		/* width: calc((100%-90px) / 4); */
+	}
+
+	.contact {
+		padding-top: 130px;
+		background-position: right;
+		background-size: 49% 100%;
+	}
+	.contact-container {
+		display: flex;
+	}
+
+	.contact-form {
+		width: 50%;
+		padding-right: 30px;
+	}
+	.contact-wrap {
+		width: 50%;
+		padding-left: 100px;
+	}
+	.contact-address {
+		margin-bottom: 70px;
+	}	
+}

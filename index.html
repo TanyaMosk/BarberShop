@@ -22,12 +22,12 @@
 		<!-- Header -->
 		<header class="header">
 			<div class="container header-container">
+				<a class="logo" href="./index.html">
+					<svg class="logo-img" width="69" height="56">
+						<use href="./img/symbol-defs.svg#logo"></use>
+					</svg>
+				</a>
 				<nav class="header-nav">
-					<a class="logo" href="./index.html">
-						<svg class="logo-img" width="69" height="56">
-							<use href="./img/symbol-defs.svg#logo"></use>
-						</svg>
-					</a>
 					<ul class="menu list">
 						<li class="menu-item"><a class="menu-link link" href="#">About</a></li>
 						<li class="menu-item"><a class="menu-link link" href="#">Services and prices</a></li>
@@ -35,8 +35,53 @@
 						<li class="menu-item"><a class="menu-link link" href="#">Contacts</a></li>
 					</ul>
 				</nav>
-				<a class="phone-number link" href="tel:+380441111111">+38 044 111 11 11</a>
-				<button class="header-btn btn" type="button">Online-booking</button>
+				<div class="header-address">
+					<a class="phone-number link" href="tel:+380441111111">+38 044 111 11 11</a>
+					<a class="link" href="#form-ancor">
+						<button class="header-btn btn" type="button">Online-booking</button>
+					</a>
+				</div>
+				<button type="button" class="mobile-menu-open" data-mobile-open>
+					<svg class="mobile-menu-open-icon" width="40" height="40">
+						<use href="./img/symbol-defs.svg#burger"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="mobile-menu" data-mobile>
+				<div class="mobile-menu-container">
+					<button type="button" class="mobile-close-btn" data-mobile-close>
+						<svg class="mobile-close-btn-icon" width="18" height="18">
+							<use href="./img/symbol-defs.svg#close-modal"></use>
+						</svg>
+					</button>
+					<nav class="mobile-header-nav">
+						<ul class="mobile-menu-list list">
+							<li class="mobile-menu-item"> <a class="mobile-menu-link link current" href="#">About</a></li>
+							<li class="mobile-menu-item"> <a class="mobile-menu-link link" href="#">Services and prices</a></li>
+							<li class="mobile-menu-item"> <a class="mobile-menu-link link" href="#">Barbers</a></li>
+							<li class="mobile-menu-item"> <a class="mobile-menu-link link" href="#">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<div class="mobile-header-address">
+						<a class="mobile-phone-number link" href="tel:+380441111111">+38 044 111 11 11</a>
+						<a class="link" href="#form-ancor">
+							<button class="mobile-header-btn btn" type="button">Online-booking</button>
+						</a>
+					</div>
+					<ul class="social-list list mobile-social-list">
+						<li class="social-name-item mobile-social-item">
+							<a class="social-link link mobile-social-link" href="#" target="_blank" rel="noopener noreferrer noffolow"
+								>Instagram</a
+							>
+						</li>
+						<li class="social-name-item mobile-social-item">
+							<a class="social-link link mobile-social-link" href="#" target="_blank" rel="noopener noreferrer noffolow"
+								>Youtube</a
+							>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<main>
@@ -67,8 +112,32 @@
 			<section class="about section">
 				<div class="container about-container">
 					<ul class="image-list list">
-						<li><img src="./img/about-us/about-img-1.jpg" alt="" /></li>
-						<li><img src="./img/about-us/about-img-2.jpg" alt="" /></li>
+						<li>
+							<picture>
+								<source
+									srcset="./img/about-us/desktop-about-1@1x.jpg 1x, ./img/about-us/desktop-about-1@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/tablet/about/tablet-about-1@1x.jpg 1x, ./img/tablet/about/tablet-about-1@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<img src="./img/about-us/desktop-about-1@1x.jpg" alt="the barber works" />
+							</picture>
+						</li>
+						<li>
+							<picture>
+								<source
+									srcset="./img/about-us/desktop-about-2@1x.jpg 1x, ./img/about-us/desktop-about-2@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/tablet/about/tablet-about-2@1x.jpg, ./img/tablet/about/tablet-about-2@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<img src="./img/about-us/desktop-about-2@1x.jpg" alt="the barber works" />
+							</picture>
+						</li>
 					</ul>
 					<div class="about-content">
 						<p class="about-subtitle subtitle">About</p>
@@ -81,7 +150,9 @@
 							into the hands of our master, you will never be the same again. We are a team that is always "on the same
 							wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
 						</p>
-						<button class="about-btn btn" type="button">ONLINE-BOOKING</button>
+						<a class="link" href="#form-ancor">
+							<button class="about-btn btn" type="button">ONLINE-BOOKING</button>
+						</a>
 					</div>
 				</div>
 			</section>
@@ -129,7 +200,9 @@
 							</li>
 						</ul>
 					</div>
-					<button class="services-btn btn" type="button">ONLINE-BOOKING</button>
+					<a class="link" href="#form-ancor">
+						<button class="services-btn btn" type="button">ONLINE-BOOKING</button>
+					</a>
 				</div>
 			</section>
 
@@ -168,12 +241,35 @@
 
 			<!-- Our barbers section -->
 			<section class="barbers section">
-				<div class="container barbers-container">
+				<div class="container barbers-container container-sm">
 					<p class="barbers-subtitle subtitle">For true enjoyers of the atmosphere</p>
 					<h2 class="barbers-title title">Our barbers</h2>
 					<ul class="barbers-list list">
 						<li class="barbers-item">
-							<img src="./img/our-barbers/john-smith.jpg" alt="Foto by John Smit" width="370" height="346" />
+							<picture>
+								<source
+									srcset="
+										./img/our-barbers/desktop-john-smith@1x.jpg 1x,
+										./img/our-barbers/desktop-john-smith@2x.jpg 2x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./img/tablet/our-barbers/tablet-john-smith@1x.jpg 1x,
+										./img/tablet/our-barbers/tablet-john-smith@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./img/mobile/our-barbers/mobile-john-smit@1x.jpg 1x,
+										./img/mobile/our-barbers/mobile-john-smit@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/our-barbers/desktop-john-smith@1x.jpg" alt="Foto by John Smit" />
+							</picture>
 							<div class="barbers-item-content-wrapper">
 								<h3 class="barbers-item-title">John Smith</h3>
 								<p class="barbers-item-text">Extreme Barber</p>
@@ -210,7 +306,30 @@
 							</div>
 						</li>
 						<li class="barbers-item">
-							<img src="./img/our-barbers/michele-doe.jpg" alt="Foto by Michele Doe" width="370" height="346" />
+							<picture>
+								<source
+									srcset="
+										./img/our-barbers/desktop-michele-doe@1x.jpg 1x,
+										./img/our-barbers/desktop-michele-doe@2x.jpg 2x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./img/tablet/our-barbers/tablet-michele-doe@1x.jpg 1x,
+										./img/tablet/our-barbers/tablet-michele-doe@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./img/mobile/our-barbers/mobile-michele-doe@1x.jpg 1x,
+										./img/mobile/our-barbers/mobile-michele-doe@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/our-barbers/desktop-michele-doe@1x.jpg 1x" alt="Foto by Michele Doe" />
+							</picture>
 							<div class="barbers-item-content-wrapper">
 								<h3 class="barbers-item-title">Michele Doe</h3>
 								<p class="barbers-item-text">Extreme Barber</p>
@@ -247,7 +366,30 @@
 							</div>
 						</li>
 						<li class="barbers-item">
-							<img src="./img/our-barbers/alan-black.jpg" alt="Foto by Alan Black" width="370" height="346" />
+							<picture>
+								<source
+									srcset="
+										./img/our-barbers/desktop-alan-black@1x.jpg 1x,
+										./img/our-barbers/desktop-alan-black@2x.jpg 2x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./img/tablet/our-barbers/tablet-alan-black@1x.jpg 1x,
+										./img/tablet/our-barbers/tablet-alan-black@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./img/mobile/our-barbers/mobile-alan-black@1x.jpg 1x,
+										./img/mobile/our-barbers/mobile-alan-black@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/our-barbers/desktop-alan-black@1x.jpg 1x" alt="Foto by Alan Black" />
+							</picture>
 							<div class="barbers-item-content-wrapper">
 								<h3 class="barbers-item-title">Alan Black</h3>
 								<p class="barbers-item-text">Extreme Barber</p>
@@ -294,16 +436,72 @@
 					<h2 class="visually-hidden">Gallery</h2>
 					<ul class="gallery-list list">
 						<li class="gallery-item">
-							<img src="./img/works/work-1.jpg" alt="barber cuts hair" width="270" height="360" />
+							<picture>
+								<source
+									srcset="./img/works/desktop-work-1@1x.jpg 1x, ./img/works/desktop-work-1@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/tablet/works/tablet-work-1@1x.jpg 1x, ./img/tablet/works/tablet-work-1@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/mobile/works/mobile-work-1@1x.jpg 1x, ./img/mobile/works/mobile-work-1@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img class="gallery-image" src="./img/works/desktop-work-1@1x.jpg" alt="barber cuts hair" />
+							</picture>
 						</li>
 						<li class="gallery-item">
-							<img src="./img/works/work-2.jpg" alt="barber shaves" width="270" height="360" />
+							<picture>
+								<source
+									srcset="./img/works/desktop-work-2@1x.jpg 1x, ./img/works/desktop-work-2@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/tablet/works/tablet-work-2@1x.jpg 1x, ./img/tablet/works/tablet-work-2@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/mobile/works/mobile-work-2@1x.jpg 1x, ./img/mobile/works/mobile-work-2@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/works/desktop-work-2@1x.jpg" alt="barber cuts hair" />
+							</picture>
 						</li>
 						<li class="gallery-item">
-							<img src="./img/works/work-3.jpg" alt="barber shaves" width="270" height="360" />
+							<picture>
+								<source
+									srcset="./img/works/desktop-work-3@1x.jpg 1x, ./img/works/desktop-work-3@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/tablet/works/tablet-work-3@1x.jpg 1x, ./img/tablet/works/tablet-work-3@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/mobile/works/mobile-work-3@1x.jpg 1x, ./img/mobile/works/mobile-work-3@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/works/desktop-work-3@1x.jpg" alt="barber cuts hair" />
+							</picture>
 						</li>
 						<li class="gallery-item">
-							<img src="./img/works/work-4.jpg" alt="barber cuts hair" width="270" height="360" />
+							<picture>
+								<source
+									srcset="./img/works/desktop-work-4@1x.jpg 1x, ./img/works/desktop-work-4@2x.jpg 2x"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="./img/tablet/works/tablet-work-4@1x.jpg 1x, ./img/tablet/works/tablet-work-4@2x.jpg 2x"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="./img/mobile/works/mobile-work-4@1x.jpg 1x, ./img/mobile/works/mobile-work-4@2x.jpg 2x"
+									media="(max-width: 767px)"
+								/>
+								<img src="./img/works/desktop-work-4@1x.jpg" alt="barber cuts hair" />
+							</picture>
 						</li>
 					</ul>
 				</div>
@@ -313,7 +511,7 @@
 			<section class="contact section">
 				<div class="container contact-container">
 					<div class="contact-form">
-						<h2 class="online-contact-title title">Online-booking</h2>
+						<h2 id="form-ancor" class="online-contact-title title">Online-booking</h2>
 						<form class="online-form">
 							<div class="form-field">
 								<input
@@ -344,65 +542,84 @@
 					</div>
 					<div class="contact-wrap">
 						<h2 class="contact-title title">Contacts</h2>
-						<address class="contact-address">
-							<ul class="contact-list list">
-								<li class="contact-item">
-									<svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
-										<path
-											stroke="#9DA4BD"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M20 10.364C20 16.09 12 21 12 21s-8-4.91-8-10.636C4 6.297 7.582 3 12 3s8 3.297 8 7.364v0Z"
-											clip-rule="evenodd"
-										/>
-										<path
-											stroke="#9DA4BD"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M12 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-											clip-rule="evenodd"
-										/>
-									</svg>
-									<a
-										class="contact-link contact-address-link link"
-										href="https://goo.gl/maps/UMfmiXaaWNB88C1E7"
-										target="_blank"
-										rel="noopener noreferrer noffolow"
-										>st. Vasilkivska, 7A <br />
-										Kyiv, 08132</a
-									>
-								</li>
-								<li class="contact-item">
-									<svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M19.9995 16.0028V18.4163C20.0013 18.8693 19.8121 19.3021 19.4783 19.6084C19.1444 19.9147 18.6969 20.066 18.2457 20.0252C15.7702 19.7562 13.3923 18.9103 11.3031 17.5555C9.35937 16.3203 7.71141 14.6724 6.47627 12.7286C5.11669 10.6299 4.2706 8.24046 4.00654 5.75383C3.96589 5.30403 4.11616 4.85785 4.42065 4.52429C4.72514 4.19073 5.1558 4.0005 5.60744 4.00008H8.02087C8.82845 3.99213 9.51679 4.5841 9.62982 5.38378C9.73168 6.15613 9.92059 6.91447 10.1929 7.64435C10.414 8.23232 10.2726 8.89515 9.83093 9.34179L8.80925 10.3635C9.95447 12.3775 11.6221 14.0451 13.6361 15.1903L14.6578 14.1686C15.1044 13.727 15.7673 13.5856 16.3552 13.8066C17.0851 14.079 17.8435 14.2679 18.6158 14.3698C19.4248 14.4839 20.0198 15.1861 19.9995 16.0028Z"
-											stroke="#9DA4BD"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-									<a class="contact-link contact-link-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-								</li>
-								<li class="contact-item">
-									<svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
-											d="M4.8 5H19.2C20.19 5 21 5.7875 21 6.75V17.25C21 18.2125 20.19 19 19.2 19H4.8C3.81 19 3 18.2125 3 17.25V6.75C3 5.7875 3.81 5 4.8 5Z"
-											stroke="#9DA4BD"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-										<path d="M20 7L12 13L4 7" stroke="#9DA4BD" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-									<a class="contact-link contact-link-mail" href="mailto:barbershop@email.com">barbershop@email.com</a>
-								</li>
-							</ul>
-						</address>
-						<h3 class="contact-subtitle subtitle">Working hours</h3>
-						<p class="contact-hours">Every day from 9:00 to 22:00</p>
+						<div class="contact-work-wrap">
+							<address class="contact-address">
+								<ul class="contact-list list">
+									<li class="contact-item">
+										<svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+											<path
+												stroke="#9DA4BD"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M20 10.364C20 16.09 12 21 12 21s-8-4.91-8-10.636C4 6.297 7.582 3 12 3s8 3.297 8 7.364v0Z"
+												clip-rule="evenodd"
+											/>
+											<path
+												stroke="#9DA4BD"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M12 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+												clip-rule="evenodd"
+											/>
+										</svg>
+										<a
+											class="contact-link contact-address-link link"
+											href="https://goo.gl/maps/UMfmiXaaWNB88C1E7"
+											target="_blank"
+											rel="noopener noreferrer noffolow"
+											>st. Vasilkivska, 7A Kyiv, 08132</a
+										>
+									</li>
+									<li class="contact-item">
+										<svg
+											class="contact-icon"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M19.9995 16.0028V18.4163C20.0013 18.8693 19.8121 19.3021 19.4783 19.6084C19.1444 19.9147 18.6969 20.066 18.2457 20.0252C15.7702 19.7562 13.3923 18.9103 11.3031 17.5555C9.35937 16.3203 7.71141 14.6724 6.47627 12.7286C5.11669 10.6299 4.2706 8.24046 4.00654 5.75383C3.96589 5.30403 4.11616 4.85785 4.42065 4.52429C4.72514 4.19073 5.1558 4.0005 5.60744 4.00008H8.02087C8.82845 3.99213 9.51679 4.5841 9.62982 5.38378C9.73168 6.15613 9.92059 6.91447 10.1929 7.64435C10.414 8.23232 10.2726 8.89515 9.83093 9.34179L8.80925 10.3635C9.95447 12.3775 11.6221 14.0451 13.6361 15.1903L14.6578 14.1686C15.1044 13.727 15.7673 13.5856 16.3552 13.8066C17.0851 14.079 17.8435 14.2679 18.6158 14.3698C19.4248 14.4839 20.0198 15.1861 19.9995 16.0028Z"
+												stroke="#9DA4BD"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+										<a class="contact-link contact-link-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+									</li>
+									<li class="contact-item">
+										<svg
+											class="contact-icon"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M4.8 5H19.2C20.19 5 21 5.7875 21 6.75V17.25C21 18.2125 20.19 19 19.2 19H4.8C3.81 19 3 18.2125 3 17.25V6.75C3 5.7875 3.81 5 4.8 5Z"
+												stroke="#9DA4BD"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+											<path d="M20 7L12 13L4 7" stroke="#9DA4BD" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<a class="contact-link contact-link-mail" href="mailto:barbershop@email.com"
+											>barbershop@email.com</a
+										>
+									</li>
+								</ul>
+							</address>
+							<div class="work-hours">
+								<h3 class="contact-subtitle subtitle">Working hours</h3>
+								<p class="contact-hours">Every day from 9:00 to 22:00</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -411,7 +628,7 @@
 		<footer class="footer">
 			<div class="container footer-container">
 				<p class="copyright">&copy; Copyright 2020</p>
-				<ul class="social-list">
+				<ul class="social-list list">
 					<li class="social-name-item">
 						<a class="social-link link" href="#" target="_blank" rel="noopener noreferrer noffolow">Instagram</a>
 					</li>
@@ -421,5 +638,6 @@
 				</ul>
 			</div>
 		</footer>
+		<script src="./js/mobile.js"></script>
 	</body>
 </html>
