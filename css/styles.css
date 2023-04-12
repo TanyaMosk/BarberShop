@@ -384,6 +384,8 @@ body {
 }
 
 .services-btn {
+	text-align: center;
+	width: 162px;
 	color: var(--primary-white-color);
 	display: block;
 	margin: auto;
